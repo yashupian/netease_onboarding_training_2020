@@ -1,15 +1,49 @@
 # netease_onboarding_training_2020
 
-这是一个netease入职培训的一个代码笔记仓库
 
-## 2020-04-17 task one:
-- 学习 Docker 基本知识，安装 Docker 运行环境
-- 使用 Docker 安装 debian 系统环境。
-- 安装Intellij或者ECLIPSE IDEA，了解常用快捷键和操作
-- 搭建Spring Boot开发环境，JDK版本8或以上
-- 学习使用有道云笔记方式记录学习过程
-- 学习过程中的笔记和代码demo使用git管理
+
+## 说明
+
+- 这是一个netease入职培训的一个代码笔记仓库；
+- 使用IDEA开发工具，代码Git托管到github；
+- 所有markdown笔记使用Typora工具记录
 
 
 
-create by YP on 2020-04-16
+## markdown语法以及Typora中的一些快捷键
+
+为了方便查询一些快捷键，于是将其总结在readme.md文件中。
+
+~~~python
+# 1.快捷键
+ctrl+b	# 加粗
+ctrl+数字(1-6)	# 标题
+ctrl+shift+k	# 代码块
+ctrl+shift +[	# 有序列表
+ctrl+shift +]	# 无序列表
+ctrl+'+'	# 提升标题级别
+ctrl+'-'	# 降低标题级别
+ctrl+/	# 进如源代码模式
+ctrl+i	# 斜体
+ctrl+b	# 粗体
+ctrl+u	# 下划线
+ctrl+k	# 超链接
+ctrl+shift+i	# 图像
+
+# 2.主要语法
+1. 有序列表
+- 无序列表
+# 标题1-6
+> 段落
+--- 水平线
+~~删除线~~
+*斜体*
+**加粗**
+```代码块```
+[link](link_address) 链接
+![image](image_address)图片
+<html>html code</html>
+~~~
+
+
+
