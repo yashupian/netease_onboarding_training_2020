@@ -2,7 +2,7 @@
 
 
 
-## 说明
+## 1.说明
 
 - 这是一个netease入职培训的一个代码笔记仓库；
 - 使用IDEA开发工具，代码Git托管到github；
@@ -10,7 +10,7 @@
 
 
 
-## markdown语法以及Typora中的一些快捷键
+## 2.markdown语法以及Typora中的一些快捷键
 
 为了方便查询一些快捷键，于是将其总结在readme.md文件中。
 
@@ -45,5 +45,7 @@ ctrl+shift+i	# 图像
 <html>html code</html>
 ~~~
 
+## 3.补充说明
 
+- 目录下的complete是springboot官网的实践项目代码：gs-rest-service项目。
 
