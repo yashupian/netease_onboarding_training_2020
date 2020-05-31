@@ -53,5 +53,6 @@ ctrl+shift+i	# 图像
 
 ## 4.第三次作业更新
 
-- 
-
+- docker进一步学习：对常用的镜像、容器实例的指令进行了总结（docker的常用命令学习和总结.md）
+- python语法的复习、python连接数据库的学习(/TASK_THREE_NOTES，/python_exercise)
+- 数据库和redis学习
