@@ -62,4 +62,4 @@ ctrl+shift+i	# 图像
 ## 5.第四次作业更新
 
 - java NIO的学习：缓存区、通道、非阻塞NIO、选择器Selector
-- 基于java NIO的简单聊天系统
+- 基于java NIO的简单聊天系统demo
