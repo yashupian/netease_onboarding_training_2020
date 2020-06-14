@@ -175,9 +175,68 @@ SelectableChannle 的结构如下图：
 
 ```java
 //创建选择器
-Selector selector = Selector.open();
+Selector.open();
 
 //向选择器注册通道
+SelectableChannel.register(Selector sel, int ops);
 
+//选择器监听事件
+//当调用 register(Selector sel, int ops) 将通道注册选择器时，选择器对通道的监听事件，需要通过第二个参数 ops 指定
+//可监听的事件类型（可使用 SelectionKey 的四个常量表示）：
+SelectionKey.OP_READ;// （1）读
+SelectionKey.OP_WRITE;// （4）写
+SelectionKey.OP_CONNECT;// （8）连接
+SelectionKey.OP_ACCEPT;// （16）接收
 ```
 
+SelectionKey：表示 SelectableChannel 和 Selector 之间的注册关系。
+
+主要方法如下：
+
+```java
+int interestOps();// 获取感兴趣事件集合
+int readyOps();// 获取通道已经准备就绪的操作的集合
+SelectableChannel channel();// 获取注册通道
+Selector selector();// 返回选择器
+boolean isReadable();// 检测 Channal 中读事件是否就绪
+boolean isWritable();// 检测 Channal 中写事件是否就绪
+boolean isConnectable();// 检测 Channel 中连接是否就绪
+boolean isAcceptable();// 检测 Channel 中接收是否就绪
+```
+
+Selector 的常用方法
+
+```java
+Set<SelectionKey> keys();// 所有的 SelectionKey 集合。代表注册在该Selector上的Channel
+selectedKeys();// 被选择的 SelectionKey 集合。返回此Selector的已选择键集
+int select();// 监控所有注册的Channel，当它们中间有需要处理的 IO 操作时，该方法返回，并将对应得的 SelectionKey;// 加入被选择的
+SelectionKey;// 集合中，该方法返回这些 Channel 的数量。
+int select(long timeout);// 可以设置超时时长的 select() 操作
+int selectNow();// 执行一个立即返回的 select() 操作，该方法不会阻塞线程
+Selector wakeup();// 使一个还未返回的 select() 方法立即返回
+void close();// 关闭该选择器
+```
+
+### 6.2 SocketChannel
+
+Java NIO中的SocketChannel是一个连接到TCP网络套接字的通道。
+
+基本的连接步骤：
+
+- 打开 SocketChannel；
+
+- 读写数据；
+
+- 关闭 SocketChannel
+
+**ServerSocketChannel** ：Java NIO中的 ServerSocketChannel 是一个可以监听新进来的TCP连接的通道，就像标准IO中的ServerSocket一样。
+
+### 6.3 DatagramChannel 
+
+**DatagramChannel** ：Java NIO中的DatagramChannel是一个能收发 UDP包的通道。
+
+操作步骤如下：
+
+- 打开 DatagramChannel
+
+- 接收/发送数据
