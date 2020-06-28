@@ -63,3 +63,9 @@ ctrl+shift+i	# 图像
 
 - java NIO的学习：缓存区、通道、非阻塞NIO、选择器Selector
 - 基于java NIO的简单聊天系统demo
+
+## 6. 第五次作业更新
+
+- Netty的学习
+- Netty简单demo：server和client的简单通信
+- Netty实现一个简单的聊天系统
